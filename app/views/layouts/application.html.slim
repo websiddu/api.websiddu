@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Websiddu
+    = stylesheet_link_tag "application"
+    = csrf_meta_tags
+  body
+    .row.container
+      .large-2.columns
+        = render "shared/sidebar"
+      .large-10.columns
+        = yield
+    = javascript_include_tag "application"
+    = javascript_include_tag "vendor/custom.modernizr"
+    / script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="3sdkowm5p3mxg7n"
+
