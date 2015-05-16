@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 1.2'
 
 
 # Database
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+gem "mongoid", "~> 4.0.0"
 gem 'bson_ext'
 
 gem 'devise'
