@@ -15,15 +15,15 @@ Websiddu::Application.routes.draw do
   root to: "projects#index"
 
   scope :api do
-    get "/projects(.:format)" => "projects#index", :defaults=> {:format=>'json'}
-    get "/projects/:id(.:format)" => "projects#show", :defaults=>{:format=>'json'}
-    post "/projects/:id(.:format)/vote" => 'projects#vote', :defaults=>{:format=>'json'}
+    get "/projects(.:format)" => "projects#index", :defaults=>{:format=> 'js'}
+    get "/projects/:id(.:format)" => "projects#show", :defaults=>{:format=> 'js'}
+    post "/projects/:id(.:format)/vote" => 'projects#vote', :defaults=>{:format=> 'json'}
 
-    get "/arts(.:format)" => "arts#index", :defaults=> {:format=>'json'}
-    get "/arts/:id(.:format)" => "arts#show", :defaults=>{:format=>'json'}
-    post "/arts/:id(.:format)/vote" => 'arts#vote', :defaults=>{:format=>'json'}
+    get "/arts(.:format)" => "arts#index", :defaults=>{:format=> 'js'}
+    get "/arts/:id(.:format)" => "arts#show", :defaults=>{:format=> 'js'}
+    post "/arts/:id(.:format)/vote" => 'arts#vote', :defaults=>{:format=> 'json'}
 
-    get "/github" => "github#index", :defaults=> {:format => 'json'}
+    get "/github" => "github#index", :defaults=> {:format =>  'json'}
 
   end
   # The priority is based upon order of creation: first created -> highest priority.
