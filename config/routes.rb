@@ -23,7 +23,7 @@ Websiddu::Application.routes.draw do
     get "/arts/:id(.:format)" => "arts#show", :defaults=>{:format=> 'js'}
     post "/arts/:id(.:format)/vote" => 'arts#vote', :defaults=>{:format=> 'json'}
 
-    get "/github" => "github#index", :defaults=> {:format =>  'json'}
+    get "/github" => "github#index", :defaults=> {:format =>  'js'}
 
   end
   # The priority is based upon order of creation: first created -> highest priority.

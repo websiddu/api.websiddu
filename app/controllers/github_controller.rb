@@ -7,7 +7,7 @@ class GithubController < ApplicationController
     end
     stats = GithubStats.new(@username)
     @github = stats
-    render json: stats.data
+    render json: stats.data, :callback => params['callback']
   end
 
   # def show
