@@ -32,7 +32,7 @@ window.ws = do ->
     # ws.projects.init()
     ws.common.util.init()
     _initSorting()
-    ahoy.trackAll()
+    # ahoy.trackAll()
     return true
 
 
