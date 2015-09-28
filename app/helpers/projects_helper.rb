@@ -4,11 +4,13 @@ module ProjectsHelper
   require 'open-uri'
 
   def updateImageSizes(description)
-    article = Nokogiri::HTML(description)
+    article = Nokogiri::HTML.fragment(description)
 
     article.css('img').each do |img|
-      size = FastImage.size(img.get_attribute('src'))
-      img.set_attribute('data-size', size)
+      width, height = FastImage.size(img.get_attribute('src'))
+      img.set_attribute('data-size', "[#{width}, #{height}]")
+      img.set_attribute('height', "#{height}px")
+      img.set_attribute('width', "#{width}px")
     end
 
     return article.to_s
