@@ -1,4 +1,5 @@
 class Project
+  include ProjectsHelper
   include Mongoid::Document
   include Mongoid::Taggable
   field :title
@@ -22,5 +23,12 @@ class Project
   end
   def self.active
     where(archived: 'false')
+  end
+
+  before_save :updated_images
+
+  protected
+  def updated_images
+    self.description = updateImageSizes(self.description)
   end
 end
