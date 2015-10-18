@@ -9,8 +9,8 @@ module ProjectsHelper
     article.css('img').each do |img|
       width, height = FastImage.size(img.get_attribute('src'))
       img.set_attribute('data-size', "[#{width}, #{height}]")
-      img.set_attribute('height', "#{height}px")
-      img.set_attribute('width', "#{width}px")
+      img.set_attribute('data-height', "#{height}px")
+      img.set_attribute('data-width', "#{width}px")
     end
 
     return article.to_s
