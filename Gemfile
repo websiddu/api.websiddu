@@ -24,6 +24,8 @@ gem 'jquery-ace-rails'
 
 gem "will_paginate_mongoid"
 
+gem 'simple_token_authentication', '~> 1.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -42,7 +44,7 @@ gem 'jpbuilder'
 gem "mongoid", "~> 4.0.0"
 gem 'bson_ext'
 
-gem 'devise'
+gem 'devise', "~> 3.2.0"
 
 gem 'compass-rails' # you need this or you get an err
 gem 'zurb-foundation', '~> 4.0.0'
