@@ -134,7 +134,7 @@ test:
 production:
   sessions:
     default:
-      database: websiddu-prod
+      database: api
       hosts:
         - localhost:27017
 <% end %>
