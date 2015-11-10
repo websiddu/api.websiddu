@@ -130,11 +130,10 @@ test:
         max_retries: 1
         retry_interval: 0
 
-<% if ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
 production:
   sessions:
     default:
       database: api
       hosts:
         - localhost:27017
-<% end %>
+
