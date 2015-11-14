@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   #after_filter :cors_set_access_control_headers
 
+  # acts_as_token_authentication_handler_for User
+  acts_as_token_authentication_handler_for User, fallback: :none
+  acts_as_token_authentication_handler_for User, only: [:create, :update, :destroy]
+
+
 
   def cors_set_access_control_headers
     headers['Access-Control-Allow-Origin'] = '*'
