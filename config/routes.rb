@@ -10,6 +10,7 @@ Websiddu::Application.routes.draw do
 
   get "githubimg" => "githubimg#index", format: :svg
 
+
   devise_for :users
 
   root to: "projects#index"
@@ -24,6 +25,7 @@ Websiddu::Application.routes.draw do
     post "/arts/:id(.:format)/vote" => 'arts#vote', :defaults=>{:format=> 'json'}
 
     get "/github" => "github#index", :defaults=> {:format =>  'js'}
+    get "/music" => "music#index", :defaults=> {:format =>  'json'}
 
   end
   # The priority is based upon order of creation: first created -> highest priority.
