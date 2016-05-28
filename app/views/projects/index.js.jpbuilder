@@ -1,5 +1,9 @@
 json.cache! ['v1', @projects], expires_in: 10.minutes do
   json.array!(@projects.reverse!) do |project|
-    json.extract! project, :title, :sequence, :votes, :projectUrl, :isActive, :description, :size, :shortDescription, :skills, :thumbnail, :banner, :screenshots, :tags, :date
+    json.extract! project, :title, :id, :sequence, :votes, :projectUrl, :isActive, :description, :size, :shortDescription, :skills, :thumbnail, :banner, :screenshots, :tags, :date, :archived
+
+    json.nextProject Project.where({:sequence => project.sequence+1}).sort({:_id=>1}).first
+    json.previousProject Project.where({:sequence => project.sequence-1}).sort({:_id=>1}).first
+
   end
 end
