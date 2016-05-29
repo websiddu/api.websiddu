@@ -125,7 +125,6 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.1)
-    newrelic_rpm (3.9.5.251)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     optionable (0.2.0)
@@ -242,7 +241,6 @@ DEPENDENCIES
   jquery-rails
   mongoid (~> 4.0.0)
   mongoid_taggable
-  newrelic_rpm
   nokogiri
   puma
   rack-cors
@@ -259,3 +257,6 @@ DEPENDENCIES
   will_paginate_mongoid
   yajl-ruby
   zurb-foundation (~> 4.0.0)
+
+BUNDLED WITH
+   1.10.6
